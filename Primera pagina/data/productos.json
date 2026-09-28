@@ -1,0 +1,485 @@
+[
+    {
+        "id": "camisa-costa",
+        "nombre": "Camisa Costa",
+        "categoria": "camisa",
+        "descripcion": "Corte recto y cuello de campo. Lino de 180 g lavado a la piedra.",
+        "precio": 54,
+        "color": {
+            "nombre": "Arena",
+            "hex": "#D6C6AA"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 4,
+            "S": 7,
+            "M": 9,
+            "L": 6,
+            "XL": 2,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-05-10T10:00:00-06:00",
+        "orden": 1
+    },
+    {
+        "id": "pantalon-muelle",
+        "nombre": "Pantalón Muelle",
+        "categoria": "pantalon",
+        "descripcion": "Pierna amplia y cintura con cordón interno. Tiro medio.",
+        "precio": 62,
+        "color": {
+            "nombre": "Carbón",
+            "hex": "#2E3431"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 1,
+            "S": 0,
+            "M": 0,
+            "L": 5,
+            "XL": 2,
+            "XXL": 1
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-05-10T10:00:00-06:00",
+        "orden": 2
+    },
+    {
+        "id": "vestido-salina",
+        "nombre": "Vestido Salina",
+        "categoria": "vestido",
+        "descripcion": "Tirantes finos, cintura marcada y falda con vuelo al tobillo.",
+        "precio": 78,
+        "color": {
+            "nombre": "Hueso",
+            "hex": "#EAE3D6"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 3,
+            "S": 5,
+            "M": 4,
+            "L": 2,
+            "XL": 0,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-09-12T10:00:00-06:00",
+        "orden": 3
+    },
+    {
+        "id": "blusa-bruma",
+        "nombre": "Blusa Bruma",
+        "categoria": "blusa",
+        "descripcion": "Manga tres cuartos, escote redondo y botones de coco.",
+        "precio": 48,
+        "color": {
+            "nombre": "Ocre",
+            "hex": "#B4532A"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 2,
+            "S": 1,
+            "M": 2,
+            "L": 0,
+            "XL": 0,
+            "XXL": 2
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-06-01T10:00:00-06:00",
+        "orden": 4
+    },
+    {
+        "id": "sobrecamisa-faro",
+        "nombre": "Sobrecamisa Faro",
+        "categoria": "sobrecamisa",
+        "descripcion": "Lino grueso de 260 g con dos bolsillos de parche. Corte amplio.",
+        "precio": 74,
+        "color": {
+            "nombre": "Oliva",
+            "hex": "#6B6A4C"
+        },
+        "holgura": -1,
+        "stock": {
+            "XS": 3,
+            "S": 4,
+            "M": 6,
+            "L": 5,
+            "XL": 3,
+            "XXL": 3
+        },
+        "rebaja": {
+            "precio": 59,
+            "inicio": "2026-09-15",
+            "fin": "2026-09-27"
+        },
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-04-20T10:00:00-06:00",
+        "orden": 5
+    },
+    {
+        "id": "falda-marea",
+        "nombre": "Falda Marea",
+        "categoria": "falda",
+        "descripcion": "Largo midi con pretina elástica en la espalda.",
+        "precio": 52,
+        "color": {
+            "nombre": "Terracota",
+            "hex": "#A4583A"
+        },
+        "holgura": -1,
+        "stock": {
+            "XS": 4,
+            "S": 5,
+            "M": 3,
+            "L": 0,
+            "XL": 1,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-06-15T10:00:00-06:00",
+        "orden": 6
+    },
+    {
+        "id": "short-estero",
+        "nombre": "Short Estero",
+        "categoria": "short",
+        "descripcion": "Largo a medio muslo con bolsillos profundos.",
+        "precio": 39,
+        "color": {
+            "nombre": "Lino natural",
+            "hex": "#DCD1BF"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 6,
+            "S": 8,
+            "M": 8,
+            "L": 6,
+            "XL": 4,
+            "XXL": 4
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-06-15T10:00:00-06:00",
+        "orden": 7
+    },
+    {
+        "id": "pantalon-rada",
+        "nombre": "Pantalón Rada",
+        "categoria": "pantalon",
+        "descripcion": "Pierna recta con pinzas delanteras y bolsillos de ojal.",
+        "precio": 58,
+        "color": {
+            "nombre": "Arena",
+            "hex": "#CDBB9B"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 3,
+            "S": 4,
+            "M": 5,
+            "L": 4,
+            "XL": 2,
+            "XXL": 2
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-09-19T10:00:00-06:00",
+        "orden": 8
+    },
+    {
+        "id": "camisa-alba",
+        "nombre": "Camisa Alba",
+        "categoria": "camisa",
+        "descripcion": "Manga larga en lino azul bruma, lavado en frío.",
+        "precio": 54,
+        "color": {
+            "nombre": "Azul bruma",
+            "hex": "#8EA2A6"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 0,
+            "S": 5,
+            "M": 6,
+            "L": 4,
+            "XL": 3,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-07-01T10:00:00-06:00",
+        "orden": 9
+    },
+    {
+        "id": "camisa-duna",
+        "nombre": "Camisa Duna",
+        "categoria": "camisa",
+        "descripcion": "Cuello mao y manga larga. Lino de 170 g con caída suave.",
+        "precio": 56,
+        "color": {
+            "nombre": "Blanco hueso",
+            "hex": "#F2EEE6"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 4,
+            "S": 6,
+            "M": 7,
+            "L": 6,
+            "XL": 4,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-09-16T10:00:00-06:00",
+        "orden": 10
+    },
+    {
+        "id": "camisa-bahia",
+        "nombre": "Camisa Bahía",
+        "categoria": "camisa",
+        "descripcion": "Corte relajado con bolsillo de parche y botones de nácar.",
+        "precio": 52,
+        "color": {
+            "nombre": "Índigo",
+            "hex": "#3F4E66"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 2,
+            "S": 5,
+            "M": 6,
+            "L": 4,
+            "XL": 3,
+            "XXL": 2
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-07-20T10:00:00-06:00",
+        "orden": 11
+    },
+    {
+        "id": "blusa-nube",
+        "nombre": "Blusa Nube",
+        "categoria": "blusa",
+        "descripcion": "Escote en V y manga globo recogida en el puño.",
+        "precio": 46,
+        "color": {
+            "nombre": "Rosa arena",
+            "hex": "#D9B8A6"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 4,
+            "S": 5,
+            "M": 4,
+            "L": 2,
+            "XL": 0,
+            "XXL": 0
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-08-01T10:00:00-06:00",
+        "orden": 12
+    },
+    {
+        "id": "blusa-lirio",
+        "nombre": "Blusa Lirio",
+        "categoria": "blusa",
+        "descripcion": "Cuello redondo con alforzas cosidas a mano en el frente.",
+        "precio": 49,
+        "color": {
+            "nombre": "Salvia",
+            "hex": "#9AA58C"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 3,
+            "S": 5,
+            "M": 6,
+            "L": 5,
+            "XL": 3,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-09-18T10:00:00-06:00",
+        "orden": 13
+    },
+    {
+        "id": "sobrecamisa-puerto",
+        "nombre": "Sobrecamisa Puerto",
+        "categoria": "sobrecamisa",
+        "descripcion": "Sarga de lino de 280 g con forro ligero en la espalda.",
+        "precio": 79,
+        "color": {
+            "nombre": "Tabaco",
+            "hex": "#7A5A3F"
+        },
+        "holgura": -1,
+        "stock": {
+            "XS": 3,
+            "S": 4,
+            "M": 2,
+            "L": 5,
+            "XL": 4,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-06-20T10:00:00-06:00",
+        "orden": 14
+    },
+    {
+        "id": "pantalon-cabo",
+        "nombre": "Pantalón Cabo",
+        "categoria": "pantalon",
+        "descripcion": "Corte palazzo con pretina alta y pinzas profundas.",
+        "precio": 64,
+        "color": {
+            "nombre": "Negro",
+            "hex": "#1F1F1F"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 3,
+            "S": 4,
+            "M": 5,
+            "L": 5,
+            "XL": 3,
+            "XXL": 0
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-07-05T10:00:00-06:00",
+        "orden": 15
+    },
+    {
+        "id": "short-palma",
+        "nombre": "Short Palma",
+        "categoria": "short",
+        "descripcion": "Tiro alto, cordón en la cintura y bastilla doblada.",
+        "precio": 49,
+        "color": {
+            "nombre": "Oliva claro",
+            "hex": "#A3A07E"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 5,
+            "S": 6,
+            "M": 6,
+            "L": 4,
+            "XL": 2,
+            "XXL": 3
+        },
+        "rebaja": {
+            "precio": 42,
+            "inicio": "2026-09-20",
+            "fin": "2026-10-10"
+        },
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-07-10T10:00:00-06:00",
+        "orden": 16
+    },
+    {
+        "id": "falda-olivo",
+        "nombre": "Falda Olivo",
+        "categoria": "falda",
+        "descripcion": "Midi cruzada con lazo lateral y forro de algodón.",
+        "precio": 55,
+        "color": {
+            "nombre": "Musgo",
+            "hex": "#5E6450"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 2,
+            "S": 4,
+            "M": 5,
+            "L": 4,
+            "XL": 3,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-07-15T10:00:00-06:00",
+        "orden": 17
+    },
+    {
+        "id": "vestido-coral",
+        "nombre": "Vestido Coral",
+        "categoria": "vestido",
+        "descripcion": "Camisero con cinturón de la misma tela y mangas enrollables.",
+        "precio": 82,
+        "color": {
+            "nombre": "Terracota claro",
+            "hex": "#C98A6B"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 3,
+            "S": 4,
+            "M": 4,
+            "L": 2,
+            "XL": 3,
+            "XXL": 0
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-08-10T10:00:00-06:00",
+        "orden": 18
+    },
+    {
+        "id": "vestido-niebla",
+        "nombre": "Vestido Niebla",
+        "categoria": "vestido",
+        "descripcion": "Tirantes anchos, espalda cruzada y bolsillos laterales.",
+        "precio": 76,
+        "color": {
+            "nombre": "Gris niebla",
+            "hex": "#B9BBB6"
+        },
+        "holgura": 0,
+        "stock": {
+            "XS": 4,
+            "S": 5,
+            "M": 5,
+            "L": 4,
+            "XL": 3,
+            "XXL": 3
+        },
+        "rebaja": null,
+        "imagen": "",
+        "activo": true,
+        "creado": "2026-09-20T10:00:00-06:00",
+        "orden": 19
+    }
+]
