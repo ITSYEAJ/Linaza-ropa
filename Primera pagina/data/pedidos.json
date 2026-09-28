@@ -1,0 +1,650 @@
+[
+    {
+        "numero": "LNZ-1001",
+        "fecha": "2026-08-27T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Mariana Solís",
+            "correo": "mariana@ejemplo.com",
+            "telefono": "555 010 1000",
+            "direccion": "Av. Reforma 118",
+            "ciudad": "Centro"
+        },
+        "items": [
+            {
+                "id": "pantalon-muelle",
+                "nombre": "Pantalón Muelle",
+                "talla": "S",
+                "cantidad": 1,
+                "precio": 62,
+                "sku": "PANTALON-S"
+            }
+        ],
+        "subtotal": 62,
+        "envio": 6,
+        "total": 68,
+        "pago": "transferencia",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1002",
+        "fecha": "2026-08-29T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Diego Paredes",
+            "correo": "diego@ejemplo.com",
+            "telefono": "555 010 1037",
+            "direccion": "Calle Olmo 42",
+            "ciudad": "Norte"
+        },
+        "items": [
+            {
+                "id": "blusa-bruma",
+                "nombre": "Blusa Bruma",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 48,
+                "sku": "BLUSABRU-M"
+            },
+            {
+                "id": "camisa-alba",
+                "nombre": "Camisa Alba",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 54,
+                "sku": "CAMISAAL-M"
+            }
+        ],
+        "subtotal": 102,
+        "envio": 0,
+        "total": 102,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1003",
+        "fecha": "2026-08-31T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Lucía Herrera",
+            "correo": "lucía@ejemplo.com",
+            "telefono": "555 010 1074",
+            "direccion": "Privada Sauce 7",
+            "ciudad": "Sur"
+        },
+        "items": [
+            {
+                "id": "short-estero",
+                "nombre": "Short Estero",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 39,
+                "sku": "SHORTEST-M"
+            },
+            {
+                "id": "blusa-nube",
+                "nombre": "Blusa Nube",
+                "talla": "L",
+                "cantidad": 1,
+                "precio": 46,
+                "sku": "BLUSANUB-L"
+            },
+            {
+                "id": "falda-olivo",
+                "nombre": "Falda Olivo",
+                "talla": "XS",
+                "cantidad": 1,
+                "precio": 55,
+                "sku": "FALDAOLI-XS"
+            }
+        ],
+        "subtotal": 140,
+        "envio": 0,
+        "total": 140,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1004",
+        "fecha": "2026-09-01T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Andrés Mora",
+            "correo": "andrés@ejemplo.com",
+            "telefono": "555 010 1111",
+            "direccion": "Calle 5 de Mayo 300",
+            "ciudad": "Centro"
+        },
+        "items": [
+            {
+                "id": "camisa-duna",
+                "nombre": "Camisa Duna",
+                "talla": "L",
+                "cantidad": 1,
+                "precio": 56,
+                "sku": "CAMISADU-L"
+            }
+        ],
+        "subtotal": 56,
+        "envio": 6,
+        "total": 62,
+        "pago": "transferencia",
+        "notas": "",
+        "estado": "cancelado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1005",
+        "fecha": "2026-09-04T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Valeria Ríos",
+            "correo": "valeria@ejemplo.com",
+            "telefono": "555 010 1148",
+            "direccion": "Av. del Mar 55",
+            "ciudad": "Costa"
+        },
+        "items": [
+            {
+                "id": "pantalon-muelle",
+                "nombre": "Pantalón Muelle",
+                "talla": "XS",
+                "cantidad": 1,
+                "precio": 62,
+                "sku": "PANTALON-XS"
+            },
+            {
+                "id": "vestido-coral",
+                "nombre": "Vestido Coral",
+                "talla": "S",
+                "cantidad": 1,
+                "precio": 82,
+                "sku": "VESTIDOC-S"
+            }
+        ],
+        "subtotal": 144,
+        "envio": 0,
+        "total": 144,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1006",
+        "fecha": "2026-09-06T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Tomás Aguilar",
+            "correo": "tomás@ejemplo.com",
+            "telefono": "555 010 1185",
+            "direccion": "Calle Pino 19",
+            "ciudad": "Norte"
+        },
+        "items": [
+            {
+                "id": "short-palma",
+                "nombre": "Short Palma",
+                "talla": "S",
+                "cantidad": 1,
+                "precio": 49,
+                "sku": "SHORTPAL-S"
+            },
+            {
+                "id": "pantalon-muelle",
+                "nombre": "Pantalón Muelle",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 62,
+                "sku": "PANTALON-M"
+            },
+            {
+                "id": "short-estero",
+                "nombre": "Short Estero",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 39,
+                "sku": "SHORTEST-M"
+            }
+        ],
+        "subtotal": 150,
+        "envio": 0,
+        "total": 150,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1007",
+        "fecha": "2026-09-08T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Sofía Castillo",
+            "correo": "sofía@ejemplo.com",
+            "telefono": "555 010 1222",
+            "direccion": "Callejón Rosa 3",
+            "ciudad": "Centro"
+        },
+        "items": [
+            {
+                "id": "blusa-bruma",
+                "nombre": "Blusa Bruma",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 48,
+                "sku": "BLUSABRU-M"
+            }
+        ],
+        "subtotal": 48,
+        "envio": 6,
+        "total": 54,
+        "pago": "transferencia",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1008",
+        "fecha": "2026-09-10T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Javier Núñez",
+            "correo": "javier@ejemplo.com",
+            "telefono": "555 010 1259",
+            "direccion": "Av. Juárez 810",
+            "ciudad": "Oriente"
+        },
+        "items": [
+            {
+                "id": "vestido-salina",
+                "nombre": "Vestido Salina",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 78,
+                "sku": "VESTIDOS-M"
+            },
+            {
+                "id": "pantalon-rada",
+                "nombre": "Pantalón Rada",
+                "talla": "L",
+                "cantidad": 1,
+                "precio": 58,
+                "sku": "PANTALON-L"
+            }
+        ],
+        "subtotal": 136,
+        "envio": 0,
+        "total": 136,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1009",
+        "fecha": "2026-09-12T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Mariana Solís",
+            "correo": "mariana@ejemplo.com",
+            "telefono": "555 010 1296",
+            "direccion": "Av. Reforma 118",
+            "ciudad": "Centro"
+        },
+        "items": [
+            {
+                "id": "pantalon-muelle",
+                "nombre": "Pantalón Muelle",
+                "talla": "L",
+                "cantidad": 1,
+                "precio": 62,
+                "sku": "PANTALON-L"
+            },
+            {
+                "id": "camisa-bahia",
+                "nombre": "Camisa Bahía",
+                "talla": "XS",
+                "cantidad": 1,
+                "precio": 52,
+                "sku": "CAMISABA-XS"
+            },
+            {
+                "id": "short-palma",
+                "nombre": "Short Palma",
+                "talla": "S",
+                "cantidad": 1,
+                "precio": 49,
+                "sku": "SHORTPAL-S"
+            }
+        ],
+        "subtotal": 163,
+        "envio": 0,
+        "total": 163,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1010",
+        "fecha": "2026-09-13T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Diego Paredes",
+            "correo": "diego@ejemplo.com",
+            "telefono": "555 010 1333",
+            "direccion": "Calle Olmo 42",
+            "ciudad": "Norte"
+        },
+        "items": [
+            {
+                "id": "camisa-alba",
+                "nombre": "Camisa Alba",
+                "talla": "XS",
+                "cantidad": 1,
+                "precio": 54,
+                "sku": "CAMISAAL-XS"
+            }
+        ],
+        "subtotal": 54,
+        "envio": 6,
+        "total": 60,
+        "pago": "transferencia",
+        "notas": "",
+        "estado": "enviado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1011",
+        "fecha": "2026-09-15T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Lucía Herrera",
+            "correo": "lucía@ejemplo.com",
+            "telefono": "555 010 1370",
+            "direccion": "Privada Sauce 7",
+            "ciudad": "Sur"
+        },
+        "items": [
+            {
+                "id": "blusa-nube",
+                "nombre": "Blusa Nube",
+                "talla": "S",
+                "cantidad": 1,
+                "precio": 46,
+                "sku": "BLUSANUB-S"
+            },
+            {
+                "id": "falda-olivo",
+                "nombre": "Falda Olivo",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 55,
+                "sku": "FALDAOLI-M"
+            }
+        ],
+        "subtotal": 101,
+        "envio": 0,
+        "total": 101,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "entregado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1012",
+        "fecha": "2026-09-17T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Andrés Mora",
+            "correo": "andrés@ejemplo.com",
+            "telefono": "555 010 1407",
+            "direccion": "Calle 5 de Mayo 300",
+            "ciudad": "Centro"
+        },
+        "items": [
+            {
+                "id": "blusa-bruma",
+                "nombre": "Blusa Bruma",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 48,
+                "sku": "BLUSABRU-M"
+            },
+            {
+                "id": "camisa-costa",
+                "nombre": "Camisa Costa",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 54,
+                "sku": "CAMISACO-M"
+            },
+            {
+                "id": "falda-marea",
+                "nombre": "Falda Marea",
+                "talla": "L",
+                "cantidad": 1,
+                "precio": 52,
+                "sku": "FALDAMAR-L"
+            }
+        ],
+        "subtotal": 154,
+        "envio": 0,
+        "total": 154,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "enviado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1013",
+        "fecha": "2026-09-19T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Valeria Ríos",
+            "correo": "valeria@ejemplo.com",
+            "telefono": "555 010 1444",
+            "direccion": "Av. del Mar 55",
+            "ciudad": "Costa"
+        },
+        "items": [
+            {
+                "id": "pantalon-muelle",
+                "nombre": "Pantalón Muelle",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 62,
+                "sku": "PANTALON-M"
+            }
+        ],
+        "subtotal": 62,
+        "envio": 6,
+        "total": 68,
+        "pago": "transferencia",
+        "notas": "",
+        "estado": "enviado",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1014",
+        "fecha": "2026-09-20T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Tomás Aguilar",
+            "correo": "tomás@ejemplo.com",
+            "telefono": "555 010 1481",
+            "direccion": "Calle Pino 19",
+            "ciudad": "Norte"
+        },
+        "items": [
+            {
+                "id": "pantalon-muelle",
+                "nombre": "Pantalón Muelle",
+                "talla": "L",
+                "cantidad": 1,
+                "precio": 62,
+                "sku": "PANTALON-L"
+            },
+            {
+                "id": "short-estero",
+                "nombre": "Short Estero",
+                "talla": "XS",
+                "cantidad": 1,
+                "precio": 39,
+                "sku": "SHORTEST-XS"
+            }
+        ],
+        "subtotal": 101,
+        "envio": 0,
+        "total": 101,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "preparando",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1015",
+        "fecha": "2026-09-22T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Sofía Castillo",
+            "correo": "sofía@ejemplo.com",
+            "telefono": "555 010 1518",
+            "direccion": "Callejón Rosa 3",
+            "ciudad": "Centro"
+        },
+        "items": [
+            {
+                "id": "sobrecamisa-faro",
+                "nombre": "Sobrecamisa Faro",
+                "talla": "XS",
+                "cantidad": 1,
+                "precio": 59,
+                "sku": "SOBRECAM-XS"
+            },
+            {
+                "id": "camisa-duna",
+                "nombre": "Camisa Duna",
+                "talla": "S",
+                "cantidad": 1,
+                "precio": 56,
+                "sku": "CAMISADU-S"
+            },
+            {
+                "id": "pantalon-cabo",
+                "nombre": "Pantalón Cabo",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 64,
+                "sku": "PANTALON-M"
+            }
+        ],
+        "subtotal": 179,
+        "envio": 0,
+        "total": 179,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "preparando",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1016",
+        "fecha": "2026-09-23T03:45:57-06:00",
+        "cliente": {
+            "nombre": "Javier Núñez",
+            "correo": "javier@ejemplo.com",
+            "telefono": "555 010 1555",
+            "direccion": "Av. Juárez 810",
+            "ciudad": "Oriente"
+        },
+        "items": [
+            {
+                "id": "pantalon-rada",
+                "nombre": "Pantalón Rada",
+                "talla": "S",
+                "cantidad": 1,
+                "precio": 58,
+                "sku": "PANTALON-S"
+            }
+        ],
+        "subtotal": 58,
+        "envio": 6,
+        "total": 64,
+        "pago": "transferencia",
+        "notas": "",
+        "estado": "nuevo",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1017",
+        "fecha": "2026-09-24T18:09:57-06:00",
+        "cliente": {
+            "nombre": "Mariana Solís",
+            "correo": "mariana@ejemplo.com",
+            "telefono": "555 010 1592",
+            "direccion": "Av. Reforma 118",
+            "ciudad": "Centro"
+        },
+        "items": [
+            {
+                "id": "blusa-bruma",
+                "nombre": "Blusa Bruma",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 48,
+                "sku": "BLUSABRU-M"
+            },
+            {
+                "id": "short-palma",
+                "nombre": "Short Palma",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 49,
+                "sku": "SHORTPAL-M"
+            }
+        ],
+        "subtotal": 97,
+        "envio": 0,
+        "total": 97,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "nuevo",
+        "demo": true
+    },
+    {
+        "numero": "LNZ-1018",
+        "fecha": "2026-09-25T10:57:57-06:00",
+        "cliente": {
+            "nombre": "Diego Paredes",
+            "correo": "diego@ejemplo.com",
+            "telefono": "555 010 1629",
+            "direccion": "Calle Olmo 42",
+            "ciudad": "Norte"
+        },
+        "items": [
+            {
+                "id": "sobrecamisa-puerto",
+                "nombre": "Sobrecamisa Puerto",
+                "talla": "M",
+                "cantidad": 1,
+                "precio": 79,
+                "sku": "SOBRECAM-M"
+            },
+            {
+                "id": "vestido-niebla",
+                "nombre": "Vestido Niebla",
+                "talla": "L",
+                "cantidad": 1,
+                "precio": 76,
+                "sku": "VESTIDON-L"
+            },
+            {
+                "id": "sobrecamisa-faro",
+                "nombre": "Sobrecamisa Faro",
+                "talla": "XS",
+                "cantidad": 1,
+                "precio": 59,
+                "sku": "SOBRECAM-XS"
+            }
+        ],
+        "subtotal": 214,
+        "envio": 0,
+        "total": 214,
+        "pago": "contra_entrega",
+        "notas": "",
+        "estado": "nuevo",
+        "demo": true
+    }
+]

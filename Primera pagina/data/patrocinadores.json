@@ -1,0 +1,106 @@
+[
+    {
+        "id": "pt_965b11a464",
+        "nombre": "Nike",
+        "simbolo": "nike",
+        "url": "",
+        "activo": true,
+        "orden": 1
+    },
+    {
+        "id": "pt_4db6adde79",
+        "nombre": "Adidas",
+        "simbolo": "adidas",
+        "url": "",
+        "activo": true,
+        "orden": 2
+    },
+    {
+        "id": "pt_5397352556",
+        "nombre": "Gucci",
+        "simbolo": "gucci",
+        "url": "",
+        "activo": true,
+        "orden": 3
+    },
+    {
+        "id": "pt_6a2da4c5a6",
+        "nombre": "Puma",
+        "simbolo": "puma",
+        "url": "",
+        "activo": true,
+        "orden": 4
+    },
+    {
+        "id": "pt_6ea1e24d60",
+        "nombre": "Jordan",
+        "simbolo": "jordan",
+        "url": "",
+        "activo": true,
+        "orden": 5
+    },
+    {
+        "id": "pt_fbeee3fab2",
+        "nombre": "Dior",
+        "simbolo": "dior",
+        "url": "",
+        "activo": true,
+        "orden": 6
+    },
+    {
+        "id": "pt_17d359918f",
+        "nombre": "New Balance",
+        "simbolo": "newbalance",
+        "url": "",
+        "activo": true,
+        "orden": 7
+    },
+    {
+        "id": "pt_f8c2475361",
+        "nombre": "Zara",
+        "simbolo": "zara",
+        "url": "",
+        "activo": true,
+        "orden": 8
+    },
+    {
+        "id": "pt_a27802d0f3",
+        "nombre": "Under Armour",
+        "simbolo": "underarmour",
+        "url": "",
+        "activo": true,
+        "orden": 9
+    },
+    {
+        "id": "pt_3b50b0335c",
+        "nombre": "The North Face",
+        "simbolo": "thenorthface",
+        "url": "",
+        "activo": true,
+        "orden": 10
+    },
+    {
+        "id": "pt_88b1432e04",
+        "nombre": "Reebok",
+        "simbolo": "reebok",
+        "url": "",
+        "activo": true,
+        "orden": 11
+    },
+    {
+        "id": "pt_23ecc0263f",
+        "nombre": "Fila",
+        "simbolo": "fila",
+        "url": "",
+        "activo": true,
+        "orden": 12
+    },
+    {
+        "id": "pt_26aaf62787",
+        "nombre": "Uniqlo",
+        "simbolo": "uniqlo",
+        "url": "",
+        "activo": true,
+        "orden": 13
+    }
+]

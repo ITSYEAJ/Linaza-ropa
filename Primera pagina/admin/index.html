@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Panel · Linaza</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@300..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body class="pagina-admin">
+
+  <div class="acceso" id="pantallaAcceso" hidden>
+    <div class="acceso__caja">
+      <span class="marca">LINAZA</span>
+      <p id="accesoTexto">Panel de administración</p>
+      <form id="formAcceso" novalidate>
+        <div class="campo">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" name="usuario" maxlength="30" autocomplete="username" required>
+        </div>
+        <div class="campo">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" name="clave" maxlength="200" autocomplete="current-password" required>
+        </div>
+        <div class="campo" id="campoClave2" hidden>
+          <label for="clave2">Repite la contraseña</label>
+          <input type="password" id="clave2" name="clave2" maxlength="200" autocomplete="new-password">
+        </div>
+        <p class="form__error" id="errorAcceso" role="alert"></p>
+        <button class="boton" type="submit" id="botonAcceso">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="admin" id="panel" hidden>
+    <aside class="lateral">
+      <span class="marca">LINAZA</span>
+      <p class="lateral__sub">Panel de la tienda</p>
+      <nav class="lateral__nav" aria-label="Secciones del panel">
+        <button type="button" data-vista="resumen" class="activo">Resumen</button>
+        <button type="button" data-vista="productos">Productos</button>
+        <button type="button" data-vista="pedidos">Pedidos <span class="contador" id="cPedidos" hidden></span></button>
+        <button type="button" data-vista="avisos">Avisos <span class="contador" id="cAvisos" hidden></span></button>
+        <button type="button" data-vista="devoluciones">Devoluciones</button>
+        <button type="button" data-vista="patrocinadores">Patrocinadores</button>
+        <button type="button" data-vista="automatizaciones">Automatizaciones</button>
+      </nav>
+      <div class="lateral__pie">
+        <a href="../public/" target="_blank" rel="noopener">Ver tienda ↗</a>
+        <button type="button" id="salir">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main class="escritorio">
+
+      <section class="vista" id="vista-resumen" aria-labelledby="tResumen">
+        <div class="escritorio__cab">
+          <h1 id="tResumen">Resumen</h1>
+          <span class="etiqueta" id="fechaHoy"></span>
+        </div>
+        <p class="nota-demo" id="notaDemo" hidden>
+          Estás viendo pedidos, avisos y devoluciones de ejemplo. Bórralos en «Automatizaciones» cuando empieces a vender.
+        </p>
+        <div class="kpis" id="kpis"></div>
+        <div class="paneles">
+          <div class="panel">
+            <div class="panel__cab"><h2>Ventas · últimos 14 días</h2><small id="totalSerie"></small></div>
+            <canvas class="grafico" id="grafico" width="720" height="240" role="img" aria-label="Gráfico de ventas por día"></canvas>
+          </div>
+          <div class="panel">
+            <h2>Más vendidos · 30 días</h2>
+            <ol class="top" id="top"></ol>
+          </div>
+          <div class="panel panel--ancho">
+            <div class="panel__cab"><h2>Alertas automáticas</h2><small id="nAlertas"></small></div>
+            <ul class="alertas" id="alertas"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="vista" id="vista-productos" aria-labelledby="tProductos" hidden>
+        <div class="escritorio__cab">
+          <h1 id="tProductos">Productos</h1>
+          <button class="boton" type="button" id="nuevoProducto">Nuevo producto</button>
+        </div>
+        <div class="filtros-admin">
+          <label class="buscador">
+            <span class="visualmente-oculto">Buscar producto</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+            <input type="search" id="buscarProducto" placeholder="Buscar" maxlength="40">
+          </label>
+          <label class="selector">
+            <span class="visualmente-oculto">Categoría</span>
+            <select id="filtroCategoria"><option value="">Todas las categorías</option></select>
+          </label>
+        </div>
+        <p class="etiqueta">Edita el stock directo en la tabla: se guarda al salir de la casilla.</p>
+        <div class="tabla-envoltura">
+          <table class="tabla">
+            <thead>
+              <tr><th>Producto</th><th>Precio</th><th>Stock por talla</th><th>Ventas 30 d</th><th>Estado</th><th><span class="visualmente-oculto">Acciones</span></th></tr>
+            </thead>
+            <tbody id="tablaProductos"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="vista" id="vista-pedidos" aria-labelledby="tPedidos" hidden>
+        <div class="escritorio__cab">
+          <h1 id="tPedidos">Pedidos</h1>
+          <button class="boton boton--contorno" type="button" id="exportarPedidos">Exportar CSV</button>
+        </div>
+        <div class="filtros-admin chips" id="filtroPedidos" role="group" aria-label="Filtrar por estado"></div>
+        <div class="tabla-envoltura">
+          <table class="tabla">
+            <thead>
+              <tr><th>Pedido</th><th>Cliente</th><th>Productos</th><th class="num">Total</th><th>Pago</th><th>Estado</th></tr>
+            </thead>
+            <tbody id="tablaPedidos"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="vista" id="vista-avisos" aria-labelledby="tAvisos" hidden>
+        <div class="escritorio__cab">
+          <h1 id="tAvisos">Avisos de reposición</h1>
+        </div>
+        <div class="panel" id="panelListos">
+          <div class="panel__cab"><h2>Listos para notificar</h2><small id="nListos"></small></div>
+          <p class="etiqueta">Estas tallas ya tienen stock. Copia los correos y el mensaje, envíalo y márcalos como notificados.</p>
+          <div class="filtros-admin">
+            <button class="btn-mini" type="button" id="copiarCorreos">Copiar correos</button>
+            <button class="btn-mini" type="button" id="copiarMensaje">Copiar mensaje</button>
+            <button class="btn-mini" type="button" id="marcarNotificados">Marcar como notificados</button>
+          </div>
+        </div>
+        <br>
+        <div class="tabla-envoltura">
+          <table class="tabla">
+            <thead>
+              <tr><th>Cliente</th><th>Prenda</th><th>Talla</th><th>Solicitado</th><th>Estado</th></tr>
+            </thead>
+            <tbody id="tablaAvisos"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="vista" id="vista-devoluciones" aria-labelledby="tDevoluciones" hidden>
+        <div class="escritorio__cab">
+          <h1 id="tDevoluciones">Devoluciones</h1>
+        </div>
+        <div class="paneles">
+          <form class="panel formulario formulario--plano" id="formDevolucion" novalidate>
+            <h2>Registrar devolución</h2>
+            <div class="campo">
+              <label for="dProducto">Producto</label>
+              <select id="dProducto" name="producto_id" required></select>
+            </div>
+            <div class="campo-doble">
+              <div class="campo">
+                <label for="dTalla">Talla</label>
+                <select id="dTalla" name="talla" required></select>
+              </div>
+              <div class="campo">
+                <label for="dMotivo">Motivo</label>
+                <select id="dMotivo" name="motivo" required>
+                  <option value="pequena">Le quedó pequeño</option>
+                  <option value="grande">Le quedó grande</option>
+                  <option value="defecto">Defecto de la prenda</option>
+                  <option value="otro">Otro motivo</option>
+                </select>
+              </div>
+            </div>
+            <div class="campo-doble">
+              <div class="campo">
+                <label for="dPedido">Pedido <small>(opcional)</small></label>
+                <input type="text" id="dPedido" name="pedido" maxlength="12" placeholder="LNZ-1001">
+              </div>
+              <div class="campo">
+                <label for="dNota">Nota <small>(opcional)</small></label>
+                <input type="text" id="dNota" name="nota" maxlength="200">
+              </div>
+            </div>
+            <label class="consentimiento">
+              <input type="checkbox" name="reingresar" checked>
+              <span>La prenda está en buen estado: sumarla al stock</span>
+            </label>
+            <p class="form__error" id="errorDevolucion" role="alert"></p>
+            <button class="boton" type="submit">Registrar</button>
+          </form>
+          <div class="panel">
+            <div class="panel__cab"><h2>Por producto</h2><small id="umbralTexto"></small></div>
+            <p class="etiqueta">Cuando «pequeño» menos «grande» llega al umbral, la tienda cambia sola la talla que recomienda.</p>
+            <div class="tabla-envoltura">
+              <table class="tabla">
+                <thead><tr><th>Producto</th><th>Motivos</th><th>Recomendación</th></tr></thead>
+                <tbody id="tablaResumenDev"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="tabla-envoltura">
+          <table class="tabla">
+            <thead><tr><th>Fecha</th><th>Producto</th><th>Talla</th><th>Motivo</th><th>Pedido</th><th><span class="visualmente-oculto">Acciones</span></th></tr></thead>
+            <tbody id="tablaDevoluciones"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="vista" id="vista-patrocinadores" aria-labelledby="tPatrocinadores" hidden>
+        <div class="escritorio__cab">
+          <h1 id="tPatrocinadores">Patrocinadores</h1>
+        </div>
+        <div class="paneles">
+          <form class="panel formulario formulario--plano" id="formPatrocinador" novalidate>
+            <h2>Agregar marca</h2>
+            <div class="campo">
+              <label for="mNombre">Nombre de la marca</label>
+              <input type="text" id="mNombre" name="nombre" maxlength="40" required>
+            </div>
+            <div class="campo">
+              <label for="mSimbolo">Símbolo del logo</label>
+              <select id="mSimbolo" name="simbolo"></select>
+            </div>
+            <div class="campo">
+              <label for="mUrl">Enlace <small>(opcional)</small></label>
+              <input type="url" id="mUrl" name="url" maxlength="200" placeholder="https://">
+            </div>
+            <div class="campo">
+              <span class="etiqueta">Vista previa</span>
+              <div class="aliado aliado--vista" id="mVista"></div>
+            </div>
+            <p class="form__error" id="errorPatrocinador" role="alert"></p>
+            <button class="boton" type="submit">Agregar al carrusel</button>
+          </form>
+          <div class="panel">
+            <div class="panel__cab"><h2>En la tienda</h2><small id="nPatrocinadores"></small></div>
+            <p class="etiqueta">El carrusel de la tienda muestra las marcas visibles en este orden.</p>
+            <div class="tabla-envoltura">
+              <table class="tabla">
+                <thead><tr><th>Marca</th><th>Estado</th><th><span class="visualmente-oculto">Acciones</span></th></tr></thead>
+                <tbody id="tablaPatrocinadores"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vista" id="vista-automatizaciones" aria-labelledby="tAuto" hidden>
+        <div class="escritorio__cab">
+          <h1 id="tAuto">Automatizaciones</h1>
+        </div>
+        <form class="reglas" id="formConfig" novalidate>
+          <div class="regla">
+            <div><h3>Stock bajo</h3><p>Con esta cantidad o menos, la tienda muestra «últimas unidades» y el resumen te alerta.</p></div>
+            <input type="number" name="umbral_stock" min="0" max="50" aria-label="Unidades para stock bajo">
+          </div>
+          <div class="regla">
+            <div><h3>Etiqueta «Nuevo»</h3><p>Días que un producto recién creado lleva la etiqueta en la tienda. Se quita sola.</p></div>
+            <input type="number" name="dias_nuevo" min="0" max="120" aria-label="Días de la etiqueta Nuevo">
+          </div>
+          <div class="regla">
+            <div><h3>Envío gratis desde</h3><p>La bolsa muestra cuánto le falta al cliente y aplica el envío gratis al llegar a este monto.</p></div>
+            <input type="number" name="envio_gratis_desde" min="0" max="10000" step="1" aria-label="Monto para envío gratis">
+          </div>
+          <div class="regla">
+            <div><h3>Costo de envío</h3><p>Se cobra cuando el pedido no llega al monto de envío gratis.</p></div>
+            <input type="number" name="costo_envio" min="0" max="500" step="0.5" aria-label="Costo de envío">
+          </div>
+          <div class="regla">
+            <div><h3>Ajuste de talla por devoluciones</h3><p>Si un modelo acumula devoluciones por talla, la recomendación de la tienda sube o baja una talla para ese modelo.</p></div>
+            <label class="interruptor">
+              <input type="checkbox" name="ajuste_automatico">
+              <span class="interruptor__pista"></span>
+              <span>Activo</span>
+            </label>
+          </div>
+          <div class="regla">
+            <div><h3>Umbral de devoluciones</h3><p>Devoluciones netas («pequeño» menos «grande») necesarias para ajustar un modelo.</p></div>
+            <input type="number" name="umbral_devoluciones" min="1" max="50" aria-label="Umbral de devoluciones">
+          </div>
+          <div class="regla">
+            <div><h3>Aviso de reposición</h3><p>Te alerta cuando, al ritmo de ventas de los últimos 30 días, el stock de un modelo alcanza para menos de estos días.</p></div>
+            <input type="number" name="dias_reposicion" min="1" max="120" aria-label="Días para alerta de reposición">
+          </div>
+          <div class="regla">
+            <div><h3>Pedidos sin preparar</h3><p>Horas que un pedido puede quedar como «nuevo» antes de marcarse urgente.</p></div>
+            <input type="number" name="horas_pedido_pendiente" min="1" max="720" aria-label="Horas para pedido pendiente">
+          </div>
+          <p class="form__error" id="errorConfig" role="alert"></p>
+          <button class="boton" type="submit">Guardar cambios</button>
+        </form>
+
+        <br>
+        <div class="panel">
+          <h2>Siempre activas</h2>
+          <ul class="lista-simple">
+            <li>Una talla sin stock aparece agotada y cambia el botón de compra por «Avísame cuando vuelva».</li>
+            <li>Al reponer una talla, los avisos pendientes de esa talla pasan a «listos para notificar».</li>
+            <li>Cada pedido descuenta el stock; si lo cancelas, las unidades vuelven solas al inventario.</li>
+            <li>Una devolución en buen estado se suma al stock de su talla.</li>
+            <li>Las rebajas empiezan y terminan en las fechas que programes; el precio vuelve solo.</li>
+            <li>El número de pedido y el SKU de cada prenda se generan automáticamente.</li>
+          </ul>
+        </div>
+
+        <br>
+        <div class="panel" id="panelDemo">
+          <h2>Datos de ejemplo</h2>
+          <p class="etiqueta">Borra los pedidos, avisos y devoluciones de ejemplo. Tus productos no se tocan.</p>
+          <button class="btn-mini btn-mini--peligro" type="button" id="borrarDemo">Borrar datos de ejemplo</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <dialog class="modal editor" id="dlgEditor" aria-labelledby="editorTitulo">
+    <button class="modal__cerrar" type="button" data-cerrar aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
+    </button>
+    <form class="formulario" id="formProducto" novalidate>
+      <h2 class="modal__titulo" id="editorTitulo">Nuevo producto</h2>
+      <input type="hidden" name="id">
+
+      <div class="editor__vista">
+        <div class="miniatura" id="editorMiniatura"></div>
+        <div class="campo">
+          <label for="eImagen">Foto <small>(JPG, PNG o WEBP, máx. 3 MB)</small></label>
+          <input type="file" id="eImagen" name="imagen" accept="image/jpeg,image/png,image/webp">
+          <label class="consentimiento" id="quitarImagenFila" hidden>
+            <input type="checkbox" name="quitar_imagen"><span>Quitar la foto y usar la ilustración</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="eNombre">Nombre</label>
+        <input type="text" id="eNombre" name="nombre" maxlength="60" required>
+      </div>
+      <div class="campo-doble">
+        <div class="campo">
+          <label for="eCategoria">Categoría</label>
+          <select id="eCategoria" name="categoria" required></select>
+        </div>
+        <div class="campo">
+          <label for="eHolgura">Corte</label>
+          <select id="eHolgura" name="holgura">
+            <option value="0">Normal</option>
+            <option value="-1">Amplio (recomienda una talla menos)</option>
+          </select>
+        </div>
+      </div>
+      <div class="campo">
+        <label for="eDescripcion">Descripción</label>
+        <textarea id="eDescripcion" name="descripcion" maxlength="240"></textarea>
+      </div>
+      <div class="campo-doble">
+        <div class="campo">
+          <label for="ePrecio">Precio</label>
+          <input type="number" id="ePrecio" name="precio" min="1" max="10000" step="0.01" required>
+        </div>
+        <div class="campo">
+          <label for="eColorNombre">Color</label>
+          <div class="color-fila">
+            <input type="text" id="eColorNombre" name="color_nombre" maxlength="30" placeholder="Arena">
+            <input type="color" name="color_hex" value="#D6C6AA" aria-label="Tono del color">
+          </div>
+        </div>
+      </div>
+
+      <p class="separador">Stock por talla</p>
+      <div class="editor__stock" id="editorStock"></div>
+
+      <p class="separador">Rebaja programada <small>(opcional)</small></p>
+      <div class="campo-triple">
+        <div class="campo">
+          <label for="eRebaja">Precio rebajado</label>
+          <input type="number" id="eRebaja" name="rebaja_precio" min="0" max="10000" step="0.01">
+        </div>
+        <div class="campo">
+          <label for="eInicio">Desde</label>
+          <input type="date" id="eInicio" name="rebaja_inicio">
+        </div>
+        <div class="campo">
+          <label for="eFin">Hasta</label>
+          <input type="date" id="eFin" name="rebaja_fin">
+        </div>
+      </div>
+
+      <label class="consentimiento">
+        <input type="checkbox" name="activo" value="1" checked>
+        <span>Visible en la tienda</span>
+      </label>
+
+      <p class="form__error" id="errorProducto" role="alert"></p>
+      <button class="boton" type="submit" id="guardarProducto">Guardar producto</button>
+      <button class="btn-mini btn-mini--peligro" type="button" id="eliminarProducto" hidden>Eliminar producto</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/prendas.js" defer></script>
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>
